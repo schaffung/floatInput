@@ -1,3 +1,4 @@
+// package for getting a single float64 input from user.
 package floatInput
 
 import (
@@ -7,8 +8,10 @@ import (
 	"strconv"
 )
 
+// GetFloatNumUser reads a floating-point number from keyboard
+// It returns the number read and any error encountered
 func GetFloatNumUser() ( float64, error ){
-
+	
 	// Creating a bufio reader.
 	reader := bufio.NewReader(os.Stdin)
 
