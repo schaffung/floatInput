@@ -2,7 +2,6 @@ package floatInput
 
 import (
 	"os"
-	"log"
 	"bufio"
 	"strings"
 	"strconv"
@@ -23,7 +22,7 @@ func GetFloatNumUser() ( float64, error ){
 	valStr = strings.TrimSpace(valStr)
 
 	// Convert the string to float value
-	val, err := strconv.ParseFloat(valStr)
+	val, err := strconv.ParseFloat(valStr, 64)
 	if err != nil {
 		return 0, err
 	}
